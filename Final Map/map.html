@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>Archaeological Sites Under Kentucky Highway-52</title> <!--Change this!! -->
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
+  <style>
+    body { margin:0; padding:0; }
+    #map { position:absolute; top:0; bottom:0; width:100%; }
+  </style>
+</head>
+<body>
+
+<div id='map'></div>
+
+  <script>
+    // Change this to your Token ----------------------
+    mapboxgl.accessToken = 'pk.eyJ1Ijoib2Zmb25hdGFuZ2VudCIsImEiOiJjandpNTZqeTIwMWU5NGJwNmRmZ3RldTZ2In0.0Kh48Ejk30hGeGh7O2D1KA';
+    // ------------------------------------------------
+
+    var map = new mapboxgl.Map({
+      container: 'map',
+
+      // Change this to your style --------------------
+      style: 'mapbox://styles/offonatangent/cjwwamoej4o1j1dozl10a9sz8',
+      // ----------------------------------------------
+
+      // Change to your location ----------------------
+      //zoom: 12.81,
+      //center: [37.601,-84.523]
+      // ----------------------------------------------
+
+    });
+
+    // Add geolocate control to the map.
+     map.addControl(new mapboxgl.GeolocateControl({
+      positionOptions: {
+        enableHighAccuracy: true
+      },
+      trackUserLocation: true
+    }));
+  </script>
+
+</body>
+
+</html>
